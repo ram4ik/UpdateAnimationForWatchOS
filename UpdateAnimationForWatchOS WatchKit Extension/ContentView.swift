@@ -25,10 +25,10 @@ struct ContentView: View {
         .onAppear() {
             _ = Timer.scheduledTimer(withTimeInterval: 0.4, repeats: true, block: { (timer) in
                 withAnimation {
-                    progress = progress + 0.1
-                    if progress >  1 {
-                        progress = 0
-                    }
+                    progress = progress + 0.1 
+                }
+                if progress >  1 {
+                    progress = 0
                 }
             })
         }
